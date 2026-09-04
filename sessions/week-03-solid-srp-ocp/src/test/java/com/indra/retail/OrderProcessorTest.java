@@ -1,6 +1,5 @@
 package com.indra.retail;
 
-//import com.indra.retail.DiscountCalculator;
 import org.junit.jupiter.api.Test;
 
 import com.indra.retail.DiscountCalculator;
