@@ -11,7 +11,7 @@ import jakarta.validation.constraints.Size;
 
 public record CreateOrderRequest(
     @NotBlank   String customerId, 
-    @NotEmpty  @Size(min = 1) List<@NotEmpty OrderItem> items, 
+    @NotEmpty  @Size(min = 1) List<OrderItem> items, 
     @NotNull @Size(min=10) String deliveryAddress) {
 
 }

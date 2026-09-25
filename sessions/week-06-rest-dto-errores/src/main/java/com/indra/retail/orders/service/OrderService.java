@@ -1,6 +1,9 @@
 package com.indra.retail.orders.service;
 
 import com.indra.retail.orders.model.Order;
+import com.indra.retail.orders.util.ConverterUtil;
+import com.indra.retail.orders.web.request.CreateOrderRequest;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.stereotype.Service;
@@ -21,5 +24,10 @@ public class OrderService {
             throw new OrderNotFoundException(orderId);
         }
         return order;
+    }
+
+    public Order create(CreateOrderRequest request) {
+        Order order = ConverterUtil.convertRequestToOrder(request);
+        return (this.create(order));
     }
 }
